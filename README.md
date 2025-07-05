@@ -88,6 +88,7 @@ curl -X POST http://localhost:3000/chat \
   -d '{"message": "Apa itu chatbot?"}'
 ```
 
+
 📁 Struktur Proyek
 ```bash
 gemini-chatbot-api/
@@ -98,6 +99,7 @@ gemini-chatbot-api/
 └── README.md            # Dokumentasi proyek
 ```
 
+
 ⚙️ Teknologi yang Digunakan
 | Teknologi                | Fungsi                                     |
 | ------------------------ | ------------------------------------------ |
@@ -106,6 +108,7 @@ gemini-chatbot-api/
 | Google Generative AI SDK | Koneksi ke model Gemini                    |
 | dotenv                   | Menyimpan variabel environment secara aman |
 | cors                     | Mengizinkan akses dari browser/client luar |
+
 
 🧠 Tentang Google Generative AI (Gemini)
 
@@ -123,6 +126,7 @@ const model = genAI.getGenerativeModel({
 ```
 
 ☁️ Deployment
+
 🔹 Deploy ke VPS / Ubuntu:
 ```bash
 # Pastikan Node.js dan Git sudah terinstall
@@ -133,7 +137,9 @@ echo "GEMINI_API_KEY=xxxxx" > .env
 node index.js
 ```
 
+
 🔹 Deploy ke Vercel / Render
+
 1. Upload repo ke GitHub
 
 2. Hubungkan ke Vercel / Render
@@ -141,6 +147,7 @@ node index.js
 3. Tambahkan environment variable: GEMINI_API_KEY
 
 4. Jalankan dan akses API dari URL yang disediakan
+
 
 🔐 Keamanan
 
@@ -151,6 +158,7 @@ Tambahkan .env ke .gitignore:
 .env
 node_modules/
 ```
+
 
 📌 Roadmap Pengembangan
 
@@ -163,6 +171,7 @@ node_modules/
  Pengaturan batas penggunaan/token
 
  Mode streaming response Gemini (live typing)
+
 
 
 ✅ Tips Tambahan
