@@ -27,19 +27,21 @@ cd gemini-chatbot-api
 ```
 
 ### 2️⃣ Install dependencies
-
+```bash
 npm install
+```
 
 ### 3️⃣ Buat file .env dan isi dengan API key Gemini
 ```bash
 GEMINI_API_KEY=ISI_API_KEY_KAMU
 PORT=3000
-
+```
 Dapatkan API Key dari Google AI Studio
 
 ### 4️⃣ Jalankan server
 ```bash
 node index.js
+```
 
 Jika berhasil, akan muncul:
 ✅ Server is running on http://localhost:3000
@@ -54,34 +56,48 @@ URL: /chat
 Method: POST
 
 Headers: Content-Type: application/json
-
+```bash
 {
   "message": "Apa itu kecerdasan buatan?"
 }
-
+```
+📤 Response
+```bash
 {
   "reply": "Kecerdasan buatan adalah cabang ilmu komputer yang berfokus pada pembuatan sistem yang dapat meniru perilaku manusia..."
 }
+```
 
-
+🧪 Contoh Pengujian
 🔸 Dengan Postman
 URL: http://localhost:3000/chat
 
 Method: POST
 
-Body → Raw → JSON:
+Body → raw → JSON:
+```bash
+{
+  "message": "Apa itu machine learning?"
+}
+```
+🔸 Dengan curl
+```bash
+curl -X POST http://localhost:3000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Apa itu chatbot?"}'
+```
 
-json
-Salin
-Edit
-
+📁 Struktur Proyek
+```bash
 gemini-chatbot-api/
 ├── index.js             # File utama server Express
 ├── .env                 # File rahasia (API Key)
 ├── package.json         # Konfigurasi project
 ├── /public              # Folder untuk file statis (opsional)
 └── README.md            # Dokumentasi proyek
+```
 
+⚙️ Teknologi yang Digunakan
 | Teknologi                | Fungsi                                     |
 | ------------------------ | ------------------------------------------ |
 | Node.js                  | Runtime JavaScript                         |
@@ -91,25 +107,30 @@ gemini-chatbot-api/
 | cors                     | Mengizinkan akses dari browser/client luar |
 
 🧠 Tentang Google Generative AI (Gemini)
-Gemini adalah model AI dari Google yang mendukung berbagai jenis input dan output. Dalam proyek ini digunakan model:
+Gemini adalah model AI dari Google yang mendukung input/output teks dan multimodal. Model yang digunakan dalam proyek ini:
 
 models/gemini-1.5-flash — cepat dan ringan
 
-models/gemini-1.5-pro — lebih cerdas dan akurat
+models/gemini-1.5-pro — lebih akurat, cocok untuk tugas kompleks
 
-Kamu bisa ganti model di index.js bagian getGenerativeModel() sesuai kebutuhan.
+Kamu bisa mengganti model di file index.js:
+```bash
+const model = genAI.getGenerativeModel({
+  model: "models/gemini-1.5-flash",
+});
+```
 
 ☁️ Deployment
 🔹 Deploy ke VPS / Ubuntu:
-bash
-Salin
-Edit
+```bash
 # Pastikan Node.js dan Git sudah terinstall
 git clone https://github.com/ronafaroni/gemini-chatbot-api.git
 cd gemini-chatbot-api
 npm install
 echo "GEMINI_API_KEY=xxxxx" > .env
 node index.js
+```
+
 🔹 Deploy ke Vercel / Render:
 Upload ke GitHub
 
