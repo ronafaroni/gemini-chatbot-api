@@ -48,6 +48,7 @@ Jika berhasil, akan muncul:
 
 🌐 Dokumentasi API
 🔹 POST /chat
+
 Mengirim prompt dan menerima balasan dari AI.
 
 Request
@@ -131,62 +132,41 @@ echo "GEMINI_API_KEY=xxxxx" > .env
 node index.js
 ```
 
-🔹 Deploy ke Vercel / Render:
-Upload ke GitHub
+🔹 Deploy ke Vercel / Render
+1. Upload repo ke GitHub
 
-Hubungkan repo dengan Vercel atau Render
+2. Hubungkan ke Vercel / Render
 
-Tambahkan environment variable GEMINI_API_KEY
+3. Tambahkan environment variable: GEMINI_API_KEY
 
-Jalankan dan akses endpoint dari URL hosting
+4. Jalankan dan akses API dari URL yang disediakan
 
 🔐 Keamanan
 Pastikan .env kamu tidak di-commit ke GitHub
 
 Tambahkan .env ke .gitignore:
-
-gitignore
-Salin
-Edit
+```bash
 .env
 node_modules/
-📌 Roadmap (Pengembangan Selanjutnya)
- Tambah dukungan multi-user
+```
 
- Logging & penyimpanan histori chat
+📌 Roadmap Pengembangan
+ Dukungan multi-user
 
- Integrasi frontend chatbot (React/HTML)
+ Logging & histori chat
 
- Pengaturan batas token & biaya (API usage limiter)
+ Integrasi frontend chatbot (HTML/React)
 
- Mode streaming token Gemini (advanced)
+ Pengaturan batas penggunaan/token
+
+ Mode streaming response Gemini (live typing)
 
 ✅ Tips Tambahan
-Tambahkan "type": "module" di package.json agar import ES6 bisa digunakan:
 
-json
-Salin
-Edit
+Tambahkan "type": "module" di package.json agar import ES6 bisa digunakan:
+```bash
 {
   "type": "module"
 }
-Gunakan nodemon untuk auto-restart saat coding:
-
-bash
-Salin
-Edit
-npm install --save-dev nodemon
-npx nodemon index.js
-📜 Lisensi
-MIT License © 2025 Rona Faroni
-
-🤝 Kontribusi
-Pull request, issue, dan feedback sangat diterima!
-
-bash
-Salin
-Edit
-# Fork repo, buat branch baru dan submit perubahanmu
-git checkout -b fitur-anda
-
+```
 
