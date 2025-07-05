@@ -108,6 +108,7 @@ gemini-chatbot-api/
 | cors                     | Mengizinkan akses dari browser/client luar |
 
 🧠 Tentang Google Generative AI (Gemini)
+
 Gemini adalah model AI dari Google yang mendukung input/output teks dan multimodal. Model yang digunakan dalam proyek ini:
 
 models/gemini-1.5-flash — cepat dan ringan
@@ -142,6 +143,7 @@ node index.js
 4. Jalankan dan akses API dari URL yang disediakan
 
 🔐 Keamanan
+
 Pastikan .env kamu tidak di-commit ke GitHub
 
 Tambahkan .env ke .gitignore:
@@ -151,6 +153,7 @@ node_modules/
 ```
 
 📌 Roadmap Pengembangan
+
  Dukungan multi-user
 
  Logging & histori chat
@@ -160,6 +163,7 @@ node_modules/
  Pengaturan batas penggunaan/token
 
  Mode streaming response Gemini (live typing)
+
 
 ✅ Tips Tambahan
 
