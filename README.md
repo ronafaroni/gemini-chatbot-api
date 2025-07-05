@@ -27,7 +27,7 @@ cd gemini-chatbot-api
 
 
 ### 2️⃣ Install dependencies
-```bash
+
 npm install
 
 ### 3️⃣ Buat file .env dan isi dengan API key Gemini
