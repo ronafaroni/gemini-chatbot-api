@@ -24,7 +24,7 @@
 ```bash
 git clone https://github.com/ronafaroni/gemini-chatbot-api.git
 cd gemini-chatbot-api
-
+```
 
 ### 2️⃣ Install dependencies
 
