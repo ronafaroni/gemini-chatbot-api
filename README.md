@@ -24,3 +24,22 @@
 ```bash
 git clone https://github.com/ronafaroni/gemini-chatbot-api.git
 cd gemini-chatbot-api
+
+### 2️⃣ Install dependencies
+```bash
+npm install
+
+### 3️⃣ Buat file .env dan isi dengan API key Gemini
+```bash
+GEMINI_API_KEY=ISI_API_KEY_KAMU
+PORT=3000
+
+Dapatkan API Key dari Google AI Studio
+
+### 4️⃣ Jalankan server
+```bash
+node index.js
+
+Jika berhasil, akan muncul:
+
+
